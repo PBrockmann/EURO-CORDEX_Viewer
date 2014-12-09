@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<!--
+ ##########################################################################
+ Patrick.Brockmann@lsce.ipsl.fr
+ PLEASE DO NOT COPY OR DISTRIBUTE WITHOUT PERMISSION
+ ##########################################################################
+-->
+  <head>
+    <meta charset="utf-8">
+    <title>EURO-CORDEX - Time Series Viewer</title>
+
+    <script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
+
+    <link href="lib/bootstrap-3.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <script src="lib/bootstrap-3.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="lib/leaflet-0.7/leaflet.css" />
+    <script type="text/javascript" src="lib/leaflet-0.7/leaflet.js"></script>
+
+    <link rel="stylesheet" href="lib/jqwidgets/jqwidgets/styles/jqx.base.css" />
+    <link rel="stylesheet" href="lib/jqwidgets/jqwidgets/styles/jqx.bootstrap.css" />
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxcombobox.js"></script>
+    <script type="text/javascript" src="lib/jqwidgets/jqwidgets/jqxradiobutton.js"></script>
+
+    <script src="EU_extended.json" type="text/javascript"></script>
+    <script src="domain.json" type="text/javascript"></script>
+    <script src="setup.js"></script>
+
+    <script src="lib/Highstock-1.3.10/js/highstock.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php">EURO-CORDEX - Time Series Viewer</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="help.html">Help</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+      	<div class="row">
+		<div class="col-xs-12">
+		<p>This web application aims at providing a quick view on the mean projected climate evolution in each european country and in some other neighboring countries. It displays expected changes, together with associated uncertainties as provided by the EURO-CORDEX multi-model ensemble of simulations. It also aims to provide a quick intercomparison among model projections in order for modelers to better understand their model's behaviour.
+        	</div>
+        </div>
+      	<div class="row">
+		<div class="col-xs-8">
+      				<div id="map" style="height: 300px;"></div>
+        	</div>
+		<div class="col-xs-4">
+			<i>Model (multiple choices possible)</i><div id='selectModels'></div>
+			<i>Variable</i><div id='selectVariable'></div>
+			<i>Experiment</i><div id='selectExperiment'></div>
+			<i>Time (multiple choices possible)</i><div id='selectTimes'></div>
+			<br>
+			<div style='display: inline; float: left; margin: 5px;' id='jqxButton1'>
+            			<span>Unselect all</span></div>
+			<div style='display: inline; float: left; margin: 5px;' id='jqxButton2'>
+            			<span>Select 10 largest countries</span></div>
+        	</div>
+        </div>
+      	<div class="row">
+		<div class="col-xs-12">
+			<div id="timeChart"></div>
+        	</div>
+        </div>
+      </div><!-- /.container -->
+
+    </div>
+
+    <div id="footer">
+       <div class="container">
+       		<p class="text-muted credit">Realised by <a target="_blank" href="http://www.lsce.ipsl.fr/en"><span title="Climate and Environment Sciences Laboratory" style="font-weight:bold;">LSCE</span></a>&nbsp;<a target="_blank" href="http://www.lsce.ipsl.fr/en"><img src="LSCE_Icon.png" title="Climate and Environment Sciences Laboratory"/></a> and hosted by <a target="_blank" href="http://www.ipsl.fr/en"><span title="Institut Pierre Simon Laplace" style="font-weight:bold;">IPSL</span></a>&nbsp;<a target="_blank" href="http://www.ipsl.fr/en"><img src="IPSL_logo.png" title="Institut Pierre Simon Laplace"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version 1.02 - 2014/03/28</p>
+      </div><!-- /.container -->
+    </div>
+
+  </body>
+</html>

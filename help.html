@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<!--
+ ##########################################################################
+ Patrick.Brockmann@lsce.ipsl.fr
+ PLEASE DO NOT COPY OR DISTRIBUTE WITHOUT PERMISSION
+ ##########################################################################
+-->
+  <head>
+    <meta charset="utf-8">
+    <title>EURO-CORDEX - Time Series Viewer</title>
+
+    <script src="lib/jquery-1.10.2.min.js"></script>
+    <link href="lib/bootstrap-3.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <script src="lib/bootstrap-3.0.2-dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+
+    <script src="userreport.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php">EURO-CORDEX - Time Series Viewer</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="help.html">Help</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="row">
+                <div class="col-xs-12">
+		<b><p>Foreword</b></br>
+		This web application aims at providing a quick view on the mean projected climate evolution in each european country and in some other neighboring countries. It displays expected changes, together with associated uncertainties as provided by the EURO-CORDEX multi-model ensemble of simulations. It also aims to provide a quick intercomparison among model projections in order for modelers to better understand their model's behaviour.
+                </div>
+        </div>
+
+        <div class="row">
+                <div class="col-xs-6">
+
+		<b><p>Context</b></br>
+		<ul>
+		<li>CORDEX (Coordinated Regional Climate Downscaling Experiment) web site - <a target="_blank" href="http://wcrp-cordex.ipsl.jussieu.fr">wcrp-cordex.ipsl.jussieu.fr</a>.
+		<li>EURO-CORDEX is the European branch of the CORDEX initiative - <a target="_blank" href="http://www.euro-cordex.net">www.euro-cordex.net</a>.
+		<li><a taget="_blank" href="http://www.cea.fr/recherche-fondamentale/euro-cordex-124987">News</a> in french on EURO-CORDEX from the CEA.
+		</ul>
+
+		<b><p>Feedback</b></br>
+		<ul>
+		<li>Do not hesitate to send us your comments and ideas by using the Feedback button on the left side.
+		</ul>
+
+		<b><p>Screencast</b></br>
+			<video width="400" height="394" controls>
+  				<source src="screencast.mp4" type="video/mp4">
+			</video> 
+                </div>
+
+                <div class="col-xs-6">
+
+		<b><p>Technical descriptions</b></br>
+		<ul>
+		<li>The interactive map is coded with Leaflet, an Open-Source JavaScript Library for Mobile-Friendly Interactive Maps - <a target="_blank" href="http://leafletjs.com">leafletjs.com</a>.
+		<li>The chart is coded with HighCharts, a JavaScript Charting Library - <a target="_blank" href="http://www.highcharts.com">www.highcharts.com</a>.
+		<li>European countries displayed and used to compute integrations have been processed from boundaries provided by <a target="_blank" href="http://www.naturalearthdata.com/downloads/50m-cultural-vectors">www.naturalearthdata.com/downloads/50m-cultural-vectors</a>.
+		<li>Shortnames for countries respect the ISO_3166-1_alpha-3 convention - <a target="_blank" href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-3">en.wikipedia.org/wiki/ISO_3166-1_alpha-3</a>.
+		<li>Note that countries are colored randomly each time you reload the page. 
+		<li>Masks and all processed integrations are available from the Thredds catalog : <a target="_blank" href="http://webportals.ipsl.jussieu.fr/thredds/catalog/EUROCORDEX/catalog.html">http://webportals.ipsl.jussieu.fr/thredds/catalog/EUROCORDEX/catalog.html</a>. The Time Series Viewer takes advantages from the NCSS (NetCDF Subset Service) to fetch data to the browser.
+		<li>When multiple choices are made both on models entry and times entry, the different dash line styles are applied on the models entry. 
+		</ul>
+
+                </div>
+        </div>
+      </div><!-- /.container -->
+
+    </div>
+
+    <div id="footer">
+       <div class="container">
+       		<p class="text-muted credit">Realised by <a target="_blank" href="http://www.lsce.ipsl.fr/en"><span title="Climate and Environment Sciences Laboratory" style="font-weight:bold;">LSCE</span></a>&nbsp;<a target="_blank" href="http://www.lsce.ipsl.fr/en"><img src="LSCE_Icon.png" title="Climate and Environment Sciences Laboratory"/></a> and hosted by <a target="_blank" href="http://www.ipsl.fr/en"><span title="Institut Pierre Simon Laplace" style="font-weight:bold;">IPSL</span></a>&nbsp;<a target="_blank" href="http://www.ipsl.fr/en"><img src="IPSL_logo.png" title="Institut Pierre Simon Laplace"/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version 1.02 - 2014/03/28</p>
+      </div><!-- /.container -->
+    </div>
+
+  </body>
+</html>

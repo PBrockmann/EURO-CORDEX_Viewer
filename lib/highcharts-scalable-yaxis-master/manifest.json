@@ -1,0 +1,27 @@
+{
+    "name": "Scalable Y-Axis",
+    "version": "1.2.3",
+    "title": "Highcharts Scalable Y-Axis",
+    "demo": [
+        "http://jsfiddle.net/RolandBanguiran/zJA93/",
+        "http://jsfiddle.net/RolandBanguiran/8L2Nb/"
+    ],
+    "author": {
+        "name": "Roland Banguiran",
+        "url": "http://sg.linkedin.com/in/rolandbanguiran"
+    },
+    "licenses": [
+        {
+            "type": "GPL v2",
+            "url": "https://github.com/RolandBanguiran/highcharts-scalable-yaxis/blob/master/LICENSE"
+        }
+    ],
+    "description": "Using this plugin lets the user manually adjust Y-Axis range by dragging the labels. Double click to go back to default range.",
+    "keywords": [
+     "yAxis",
+     "scalable"
+    ],
+    "dependencies": {
+        "Highcharts": ">=3.0.0"
+    }
+}
